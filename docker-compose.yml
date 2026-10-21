@@ -1,0 +1,26 @@
+# Optional: Self-Managed PostgreSQL Database & App Services
+# Run: docker compose up -d postgres
+# Or run both database & app: docker compose up -d
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: shree_vrundaban_db
+    restart: always
+    environment:
+      POSTGRES_USER: ${PGUSER:-hoteladmin}
+      POSTGRES_PASSWORD: ${PGPASSWORD:-hotelsecurepass2026}
+      POSTGRES_DB: ${PGDATABASE:-shree_vrundaban_db}
+    ports:
+      - "127.0.0.1:5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${PGUSER:-hoteladmin} -d ${PGDATABASE:-shree_vrundaban_db}"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  pgdata:
+    driver: local

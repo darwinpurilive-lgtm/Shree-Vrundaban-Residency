@@ -1,0 +1,70 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Production build artifacts
+dist/
+build/
+server.js
+
+# Environment variables & secrets (NEVER commit secrets or real credentials)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.env
+!.env.example
+
+# Local SQLite databases, journals, and lock files
+*.sqlite
+*.sqlite3
+*.db
+*.db-journal
+*-wal
+*-shm
+data/*.sqlite*
+data/*.db*
+data/*.bak
+data/*.json
+data/db.json
+
+# Backups & archives
+backups/
+*.bak
+*.tar.gz
+*.zip
+
+# User uploaded files (keep placeholder or directory with .gitkeep)
+uploads/*
+public/uploads/*
+!public/uploads/.gitkeep
+
+# Logs & debugging
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Testing & coverage
+coverage/
+.nyc_output/
+
+# Editor & OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# AI Studio temporary artifacts
+.aistudio/

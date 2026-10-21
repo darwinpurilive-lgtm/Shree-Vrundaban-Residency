@@ -1,0 +1,6 @@
+{
+  "name": "Shree Vrundaban Residency",
+  "description": "Hotel website for Shree Vrundaban Residency, Puri, Odisha (near Hanuman Temple). Features clean AC rooms, verified facilities, location map, dynamic photo gallery, and secure management portal.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
